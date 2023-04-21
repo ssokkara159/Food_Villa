@@ -1,0 +1,45 @@
+.header {
+  background-color: rgba(100, 55, 51, 0.989);
+  display: flex;
+  justify-content: space-between;
+  border: solid black;
+}
+.logo {
+  width: 120px;
+  height: 90px;
+  border-radius: 90%;
+  border-color: black;
+}
+.search {
+  padding: 20px;
+  margin: 25px;
+  width: 500px;
+  height: 40px;
+  justify-content: center;
+  border-color: black;
+  /* box-shadow: 2%; */
+  /* border-left: 20px; */
+}
+.search-button {
+  padding: 7px;
+  /* justify-content: space-between; */
+  /* border-right: 100%; */
+  border-radius: 20%;
+  border-color: black;
+}
+.icon-container img {
+  width: 45px;
+  height: 50px;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 100%;
+}
+nav > ul > li {
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  display: inline;
+  color: aliceblue;
+  font-style: oblique;
+}
