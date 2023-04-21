@@ -1,45 +1,71 @@
-.header {
-  background-color: rgba(100, 55, 51, 0.989);
+html,
+body {
+  border-top: 3%;
+  border-radius: 2%;
+  background-color: rgba(36, 116, 136, 0.776);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.header-container {
+  border-radius: 3%;
+  background-color: rgb(18, 34, 64);
   display: flex;
   justify-content: space-between;
-  border: solid black;
+  padding: 0px 30px;
+  box-shadow: 1px 1px 1px black;
+  font-size: medium;
+}
+
+.nav-items {
+  color: rgba(32, 163, 224, 0.947);
+  display: flex;
+  list-style-type: none;
 }
 .logo {
-  width: 120px;
-  height: 90px;
-  border-radius: 90%;
-  border-color: black;
-}
-.search {
-  padding: 20px;
-  margin: 25px;
-  width: 500px;
-  height: 40px;
-  justify-content: center;
-  border-color: black;
-  /* box-shadow: 2%; */
-  /* border-left: 20px; */
-}
-.search-button {
   padding: 7px;
-  /* justify-content: space-between; */
-  /* border-right: 100%; */
-  border-radius: 20%;
-  border-color: black;
+  width: 100px;
+  border-radius: 30%;
 }
-.icon-container img {
-  width: 45px;
-  height: 50px;
-  padding: 8px;
-  margin: 4px;
-  border-radius: 100%;
+.nav-items > li {
+  padding: 10px;
+  font-weight: 600;
 }
-nav > ul > li {
-  padding: 5px;
-  margin: 5px;
+
+.cart {
+  width: 40px;
+}
+
+.cart-container {
+  color: rgb(68, 134, 192);
+  padding: 15px;
+  background-color: rgb(11, 98, 104);
+}
+
+.right {
   display: flex;
-  justify-content: space-between;
-  display: inline;
-  color: aliceblue;
-  font-style: oblique;
+  flex-direction: row-reverse;
+}
+
+/* resto component */
+
+.resto-card {
+  color: rgb(233, 212, 184);
+  display: flex;
+  padding: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  border-radius: 5%;
+  background-color: rgb(48, 72, 53);
+  width: 20%;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.resto-image > img {
+  width: 100%;
 }
