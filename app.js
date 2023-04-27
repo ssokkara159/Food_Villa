@@ -18,9 +18,9 @@ const NavItems = () => {
   return (
     <>
       <ul className="nav-items">
-        <li>Home</li>
-        <li>Help</li>
-        <li>Profile</li>
+        <li className="home">Home</li>
+        <li className="help">Help</li>
+        <li className="profile">Profile</li>
       </ul>
     </>
   );
