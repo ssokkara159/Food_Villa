@@ -1,20 +1,36 @@
 import { restoData } from "../Constants/restoData";
 import RestoCard from "../../RestoCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // import SearchComponent from "../SearchComponent/Search";\
 
 const BodyComponent = () => {
+  const [restaurants, setRestaurants] = useState(restoData);
+  const [searchText, setSearchText] = useState("");
+
   function filterData(searchText, restaurants) {
     const searchData = restaurants.filter((restaurant) => {
       return restaurant.data.name.includes(searchText);
     });
-    console.log(searchData);
+
     return searchData;
   }
 
-  const [restaurants, setRestaurants] = useState(restoData);
-  const [searchText, setSearchText] = useState("");
+  useEffect(() => {
+    // Api call//
+    getRestoData();
+  }, []);
+
+  async function getRestoData() {
+    const rData = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.385044&lng=78.486671&page_type=DESKTOP_WEB_LISTING"
+    );
+
+    const json = await rData.json();
+    console.log(json);
+    setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+  }
+
   return (
     <>
       <div className="search-container">
@@ -25,7 +41,7 @@ const BodyComponent = () => {
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
-        ></input>
+        />
         <button
           className="search-btn"
           onClick={() => {
