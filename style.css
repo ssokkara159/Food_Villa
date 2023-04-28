@@ -18,7 +18,7 @@ body {
 }
 
 .nav-items {
-  color: rgba(32, 163, 224, 0.947);
+  color: rgba(210, 214, 216, 0.947);
   display: flex;
   list-style-type: none;
 }
@@ -28,6 +28,7 @@ body {
   border-radius: 30%;
 }
 .nav-items > li {
+  /* background-color: rgb(11, 98, 104); */
   padding: 10px;
   font-weight: 600;
 }
